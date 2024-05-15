@@ -1,11 +1,12 @@
+
 <?php 
-  include('includes/header.php');
+  include'includes/header.php';
 ?>
 
 <?php 
-  include('includes/navbar.php');
+  include'includes/body.php';
 ?>
 
 <?php 
-  include('includes/footer.php');
+  include'includes/footer.php';
 ?>

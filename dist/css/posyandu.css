@@ -1,0 +1,51 @@
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {min-height: 100%;}
+
+body {
+  background-image: url('../assets/bg-landing-page.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #63ACE5;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7C5D1;
+  border-radius: 17px;
+}
+
+.lato-thin,
+.lato-light,
+.lato-regular,
+.lato-bold,
+.lato-black,
+.lato-thin-italic,
+.lato-light-italic,
+.lato-regular-italic,
+.lato-bold-italic,
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+}
+
+.input-group {
+  margin-top: 15rem;
+}
+
+.input-group-container {
+  margin: auto;
+}
+
+.btn-search {
+  background-color: #F7C5D1;
+}
