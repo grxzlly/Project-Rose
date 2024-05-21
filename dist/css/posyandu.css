@@ -4,7 +4,10 @@
   padding: 0;
 }
 
-html, body {min-height: 100%;}
+html, body {
+  min-height: 100%;
+  max-height: 100%;
+}
 
 body {
   background-image: url('../assets/bg-landing-page.jpg');
@@ -15,6 +18,7 @@ body {
 
 .navbar {
   background-color: #63ACE5;
+  border-bottom: 1px solid black;
 }
 
 .navbar-brand {
@@ -39,7 +43,7 @@ body {
 }
 
 .input-group {
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
 .input-group-container {
@@ -48,4 +52,12 @@ body {
 
 .btn-search {
   background-color: #F7C5D1;
+}
+
+.footer-container {
+  border-top: 1px solid black !important;
+  background-color: #63ACE5;
+  position: absolute;
+  bottom: 0;
+  color: black;
 }
