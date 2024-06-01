@@ -1,0 +1,56 @@
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #63ace5 !important;
+}
+
+.table-ukur {
+    border: solid 1px black !important;
+    text-align: center !important;
+}
+
+.table-ukur th {
+    background-color: #63ace5 !important;
+}
+
+.table-anak {
+    margin-bottom: 0px !important;
+}
+
+.widget-box {
+    padding: 15px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+    margin: 15px !important;
+    border: solid 1px black !important;
+    background-color: white !important;
+}
+
+.widget-header {
+    border: solid 1px black !important;
+    background-image: linear-gradient(to bottom, #fff 0, #eee 100%) !important;
+    background-repeat: repeat-x !important;
+    box-sizing: content-box !important;
+    position: relative !important;
+}
+
+.widget-title {
+    margin: 0.2rem !important;
+}
+
+.lato-thin,
+.lato-light,
+.lato-regular,
+.lato-bold,
+.lato-black,
+.lato-thin-italic,
+.lato-light-italic,
+.lato-regular-italic,
+.lato-bold-italic,
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+}
