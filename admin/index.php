@@ -22,11 +22,11 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Masuk untuk mengakses halaman</p>
-                <form action="include.php" method="post">
-                    <div class="input-group mb-3"> <input type="email" class="form-control" placeholder="Email">
+                <form action="login.php" method="post">
+                    <div class="input-group mb-3"> <input type="text" name="username" class="form-control" placeholder="Username">
                         <div class="input-group-text"> <span class="bi bi-envelope"></span> </div>
                     </div>
-                    <div class="input-group mb-3"> <input type="password" class="form-control" placeholder="Password">
+                    <div class="input-group mb-3"> <input type="password" name="password" class="form-control" placeholder="Password">
                         <div class="input-group-text"> <span class="bi bi-lock-fill"></span> </div>
                     </div> <!--begin::Row-->
                     <div class="row">
@@ -36,7 +36,7 @@
                                 </label> </div>
                         </div> <!-- /.col -->
                         <div class="col-4">
-                            <div class="d-grid gap-2"> <button type="submit" class="btn btn-primary">Masuk</button> </div>
+                            <div class="d-grid gap-2"> <button type="submit" name="login" class="btn btn-primary" value="Log In">Masuk</button> </div>
                         </div> <!-- /.col -->
                     </div> <!--end::Row-->
                 </form>
@@ -47,29 +47,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script> <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script> <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
     <script src="../../../dist/js/adminlte.js"></script> <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
-    <script>
-        const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
-        const Default = {
-            scrollbarTheme: "os-theme-light",
-            scrollbarAutoHide: "leave",
-            scrollbarClickScroll: true,
-        };
-        document.addEventListener("DOMContentLoaded", function() {
-            const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
-            if (
-                sidebarWrapper &&
-                typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
-            ) {
-                OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
-                    scrollbars: {
-                        theme: Default.scrollbarTheme,
-                        autoHide: Default.scrollbarAutoHide,
-                        clickScroll: Default.scrollbarClickScroll,
-                    },
-                });
-            }
-        });
-    </script> <!--end::OverlayScrollbars Configure--> <!--end::Script-->
 </body><!--end::Body-->
 
 </html>

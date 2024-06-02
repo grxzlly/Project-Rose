@@ -68,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "</div>";
         // finish box header title
 
+        //IMPORTANT DO NOT DELETE/EDIT AT ALL
         // echo "<div class='data-anak'>";
         // echo "<p>NIK: " . $anak['nik'] . "</p>" ;
         // echo "<p>Nama: " . $anak['nama'] . "</p>" ;
@@ -77,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // echo "<p>Kabupaten: " . $anak['kabupaten'] . "</p>" ;
         // echo "<p>Kecamatan: " . $anak['kecamatan'] . "</p>" ;
         // echo "</div></div>" ;
-
+        //END OF IMPOORTANT
 
         echo "<div class='data-anak'>";
         echo "<table class='table table-anak'>";
