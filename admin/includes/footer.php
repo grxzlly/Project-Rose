@@ -14,7 +14,33 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script> <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script> <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
   <script src="../admin/dist/js/adminlte.js"></script> <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+  <script>
+    $(document).ready(function() {
+        // Fetch data from the database for the anak entity
+        $.ajax({
+            url: "fetch_anak_data.php",
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                // Update the first h3 element with the fetched data
+                $(".jumlah-balita").text(data.jumlah_anak);
+            }
+        });
+
+        // Fetch data from the database for the pengukuran entity
+        $.ajax({
+            url: "fetch_pengukuran_data.php",
+            type: "GET",
+            dataType: "json",
+            success: function(data) {
+                // Update the second h3 element with the fetched data
+                $(".jumlah-pengukuran").text(data.jumlah_pengukuran);
+            }
+        });
+    });
+</script>
   </body><!--end::Body-->
 
 </html>

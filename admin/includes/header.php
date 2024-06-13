@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en"> <!--begin::Head-->
-
 <head> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Posyandu Mawar | Dashboard</title><!--begin::Primary Meta Tags-->
@@ -11,7 +10,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css" integrity="sha256-Qsx5lrStHZyR9REqhUF8iQt73X06c8LGIUPzpOhwRrI=" crossorigin="anonymous"><!--end::Third Party Plugin(Bootstrap Icons)--><!--begin::Required Plugin(AdminLTE)-->
   <link rel="stylesheet" href="dist/css/adminlte.css"><!--end::Required Plugin(AdminLTE)-->
   <link rel="stylesheet" href="dist/css/admin.css">
-  <link rel="icon" type="image/x-icon" href="../dist/assets/favicon.ico"> <!-- Title Icon -->
+  <link rel="icon" type="image/x-icon" href="dist/assets/img/favicon.ico"> <!-- Title Icon -->
 </head> <!--end::Head--> <!--begin::Body-->
 
 <body class="layout-fixed sidebar-expand-lg sidebar-mini sidebar-collapse bg-body-tertiary"> <!--begin::App Wrapper-->
@@ -23,16 +22,22 @@
               </ul>
               <ul class="navbar-nav ms-auto">
                  <!--begin::User Menu Dropdown-->
-                  <li class="nav-item dropdown user-menu"> <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> <img src="../admin/dist/assets/img/admin.png" class="user-image rounded-circle shadow" alt="User Image"> <span class="d-none d-md-inline">Posyandu Mawar</span> </a>
+                  <li class="nav-item dropdown user-menu"> <a href="#" class="nav-link dropdown-toggle" id data-bs-toggle="dropdown"> <img src="../admin/dist/assets/img/admin.png" class="user-image rounded-circle shadow" alt="User Image"> <span class="d-none d-md-inline"><?php echo $_SESSION['username']; ?></span> </a>
                       <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end"> <!--begin::User Image-->
                           <li class="user-header text-bg-primary"> <img src="../admin/dist/assets/img/admin.png" class="rounded-circle shadow" alt="User Image">
                               <p>
+                                  <?php echo $_SESSION['username']; ?>
+                                  <br>
                                   Posyandu Mawar
                                   <small>RW 08</small>
                               </p>
                           </li> <!--end::User Image--> <!--begin::Menu Body-->
                          <!--begin::Menu Footer-->
-                          <li class="user-footer"> <a href="#" class="btn btn-default btn-flat">Sign out</a> </li> <!--end::Menu Footer-->
+                          <li class="user-footer">
+                            <form method="post" action="../admin/logout.php">
+                                <a href="../admin/index.php" class="btn btn-default btn-flat" type="submit" id="logout-button">Sign out</a>
+                            </form>
+                        </li> <!--end::Menu Footer-->
                       </ul>
                   </li> <!--end::User Menu Dropdown-->
               </ul> <!--end::End Navbar Links-->
@@ -44,7 +49,7 @@
           <div class="sidebar-wrapper">
             <nav class="mt-2"> <!--begin::Sidebar Menu-->
                     <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
-                        <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon bi bi-house-fill"></i>
+                        <li class="nav-item"> <a href="../admin/include.php" class="nav-link"> <i class="nav-icon bi bi-house-fill"></i>
                                 <p>
                                     Dashboard
                                 </p>
@@ -57,13 +62,27 @@
                                 </p>
                             </a>
                             <ul class="nav nav-treeview">
-                                <li class="nav-item"><a href="#" class="nav-link"> <i class="nav-icon bi bi-person-fill"></i>
+                                <li class="nav-item"><a href="../admin/master_balita.php" class="nav-link"> <i class="nav-icon bi bi-person-fill"></i>
                                     <p>Data Balita</p>
-                                    </a></li>
+                                    </a>
+                                </li>
+                                <li class="nav-item"><a href="data_pengukuran.php" class="nav-link"> <i class="nav-icon bi bi-rulers"></i>
+                                    <p>Data Pengukuran</p>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
+                        <?php 
+                            if ($_SESSION['role'] == 'admin') {
+                                echo '<li class="nav-item"> <a href="../admin/data_admin.php" class="nav-link"> <i class="bi bi-person-raised-hand"></i>
+                                <p>
+                                    Kelola Data Kader
+                                </p>
+                                    </a>
+                                </li>';
+                            }
+                        ?>
                     </ul> <!--end::Sidebar Menu-->
-
                 </nav>
           </div> <!--end::Sidebar Wrapper-->
       </aside> <!--end::Sidebar--> <!--begin::App Main-->

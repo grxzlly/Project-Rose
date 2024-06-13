@@ -95,15 +95,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<tr>" ;
         echo "<td>Alamat</td>" . "<td>:</td>" . "<td>" . "&nbsp;" . $anak['alamat'] . "</td>" ;
         echo "</tr>" ;
-        echo "<tr>" ;
-        echo "<td>Provinsi</td>" . "<td>:</td>" . "<td>" . "&nbsp;" . $anak['provinsi'] . "</td>" ;
-        echo "</tr>" ;
-        echo "<tr>" ;
-        echo "<td>Kabupaten</td>" . "<td>:</td>" . "<td>" . "&nbsp;" . $anak['kabupaten'] . "</td>" ;
-        echo "</tr>" ;
-        echo "<tr>" ;
-        echo "<td>Kecamatan</td>" . "<td>:</td>" . "<td>" . "&nbsp;" . $anak['kecamatan'] . "</td>" ;
-        echo "</tr>" ;
         echo "</tbody>" ;
         echo "</table>" ;
         echo "</div>" ;
